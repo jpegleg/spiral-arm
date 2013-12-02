@@ -7,7 +7,7 @@ for UNIX system monitoring and process control.
 
 The Library currently includes the following:
 - ssh-limit.sh
-- user-restrict.sh
+- lock.sh
 
 To install, become root and run:
 bash ./install-spiral-arm.sh
