@@ -2,9 +2,9 @@
 # Limit ssh sessions on the system with checks
 # and process termination.
 
-# Set the maximum processes containing key word "ssh"
+# Set the ssh hit limit
 
-SETLIMIT=16
+SETLIMIT=2
 
 # Set ignored pids to NULL 
 
@@ -69,7 +69,7 @@ function createwhitelist {
 # process with ssh returned from ps that
 # is not on the whitelist.
 
-SETLIMIT=0; createblacklist ; killblacklist 
+createblacklist ; killblacklist 
 
 # Clean up.
 rm -f /var/opt/spiral-arm/ssh-count.out
