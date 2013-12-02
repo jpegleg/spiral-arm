@@ -12,9 +12,6 @@ IGNOREPROC1=NULL
 IGNOREPROC2=NULL
 IGNOREPROC3=NULL
 
-# Clear the blacklist
-touch /var/opt/spiral-arm/black.pid
-
 # Count the ssh hits and store the pids to a file and variable.
 
 SSHPS=$(ps aux | grep ssh | grep -v grep | grep -v ssh-limit.sh | grep -v $IGNOREPROC1 | grep -v $IGNOREPROC2 | grep -v $IGNOREPROC3 | awk '{print $2}') 
