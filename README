@@ -13,3 +13,6 @@ The Library currently includes the following:
 To install, become root and run:
 bash ./install-spiral-arm.sh
 
+Note:
+1 - Root bypasses Spiral Arm.
+2 - Use "bash ./scriptnamehere" as root to run the scripts.
