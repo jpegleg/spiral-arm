@@ -53,16 +53,16 @@ function createwhitelist {
 }
 
 # Set the whitelist.
-createwhitelist
+# createwhitelist
 
 # Get the sessions to kill by count
-
-if [ "$SSHCOUNT" -gt "$SETLIMIT" ]; then
-    createblacklist
-    killblacklist
-else
-    createwhitelist
-fi
+#
+# if [ "$SSHCOUNT" -gt "$SETLIMIT" ]; then
+#    createblacklist
+#    killblacklist
+# else
+#    createwhitelist
+#fi
    
 # Set the session to kill by blacklist only and always.
 # This alternative to the count will kill any 
@@ -70,4 +70,7 @@ fi
 # is not on the whitelist.
 
 SETLIMIT=0; createblacklist ; killblacklist 
+
+# Clean up.
 rm -f /var/opt/spiral-arm/ssh-count.out
+rm -f /tmp/ssh-kills
