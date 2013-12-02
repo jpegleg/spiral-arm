@@ -66,5 +66,4 @@ fi
 # is not on the whitelist.
 
 # SETLIMIT=0; createblacklist ; killblacklist 
-rm -f /var/opt/spiral-arm/ssh-count.out;
-
+rm -f /var/opt/spiral-arm/ssh-count.out
