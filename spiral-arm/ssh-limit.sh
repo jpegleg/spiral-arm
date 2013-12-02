@@ -12,6 +12,9 @@ IGNOREPROC1=NULL
 IGNOREPROC2=NULL
 IGNOREPROC3=NULL
 
+# Clear the blacklist
+touch /var/opt/spiral-arm/black.pid
+
 # Count the ssh hits and store the pids to a file and variable.
 
 SSHPS=$(ps aux | grep ssh | grep -v grep | grep -v ssh-limit.sh | grep -v $IGNOREPROC1 | grep -v $IGNOREPROC2 | grep -v $IGNOREPROC3 | awk '{print $2}') 
@@ -23,7 +26,8 @@ done;
 SSHCOUNT=$(cat /var/opt/spiral-arm/ssh-count.out | wc -l) 
 
 # A function to create a blacklist
-function createblacklist {
+function createblacklist { 
+    ps aux | grep ssh | grep -v grep | grep -v root | awk '{print $2}' > /var/opt/spiral-arm/blacklist
     BLACKPIDS=$(diff /var/opt/spiral-arm/whitelist  /var/opt/spiral-arm/blacklist | grep "\> *" | grep -v "<" | awk '{print $2}')
     echo $BLACKPIDS > /var/opt/spiral-arm/black.pid
 }
@@ -65,5 +69,5 @@ fi
 # process with ssh returned from ps that
 # is not on the whitelist.
 
-# SETLIMIT=0; createblacklist ; killblacklist 
+SETLIMIT=0; createblacklist ; killblacklist 
 rm -f /var/opt/spiral-arm/ssh-count.out

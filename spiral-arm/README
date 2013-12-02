@@ -1,9 +1,13 @@
 #####################
-## SPIRAL ARM  1.0 ##
+## SPIRAL ARM  1.1 ##
 #####################
 
 Spiral Arm is a collection of shell scripts
 for UNIX system monitoring and process control.
+
+The Library currently includes the following:
+- ssh-limit.sh
+- user-restrict.sh
 
 To install, become root and run:
 bash ./install-spiral-arm.sh
