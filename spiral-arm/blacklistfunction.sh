@@ -5,3 +5,4 @@ function createblacklist {
     echo $BLACKPIDS > /var/opt/spiral-arm/black.pid
 }
 
+createblacklist

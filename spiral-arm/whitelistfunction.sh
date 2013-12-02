@@ -5,4 +5,4 @@ function createwhitelist {
     chown root:root /var/opt/spiral-arm
 }
 
-
+createwhitelist

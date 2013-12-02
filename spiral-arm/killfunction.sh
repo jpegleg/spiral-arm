@@ -11,3 +11,4 @@ else
     chown nobody:nobody /tmp/ssh-limit
 fi
 }
+killblacklist
