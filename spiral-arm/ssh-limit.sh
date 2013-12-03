@@ -61,11 +61,7 @@ function createwhitelist {
 #    createwhitelist
 #fi
    
-# Set the session to kill by blacklist only and always.
-# This alternative to the count will kill any 
-# process with ssh returned from ps that
-# is not on the whitelist.
-
+# Use count and whitelist diff to deternmine kill.
 createblacklist ; killblacklist 
 
 # Clean up.
