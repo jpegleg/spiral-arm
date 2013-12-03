@@ -2,6 +2,7 @@ alias cbl="sudo bash /var/opt/spiral-arm/clearblacklist.sh";
 alias smx="sudo bash /var/opt/spiral-arm/setlimit.sh";
 alias cwl="sudo bash /var/opt/spiral-arm/clearwhitelist.sh";
 alias blf="sudo bash /var/opt/spiral-arm/blacklistfunction.sh";
+alias wlf="sudo bash /var/opt/spiral-arm/whitelistfunction.sh";
 alias klf="sudo bash /var/opt/spiral-arm/killfunction.sh";
 alias lock="sudo bash /var/opt/spiral-arm/lock.sh & ";
 alias lockdrop="ps aux | grep lock.sh | grep -v grep | awk '{print $2}' | xargs kill -9"
