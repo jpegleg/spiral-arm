@@ -11,6 +11,10 @@ The Library currently includes the following:
 - setlimit.sh
 - stand-alone functions
 
+You need these two files:
+install-spiral-arm.sh
+spiralarm.tar.gz
+
 To install, become root and run:
 bash ./install-spiral-arm.sh
 
@@ -26,9 +30,9 @@ sudo bash /var/opt/spiral-arm/lock.sh &
 # /place/thing-ssh start
 # Then add it to the whitelist.
 sudo bash /var/opt/spiral-arm/whitelistfunction.sh
-# Then you can drop the session.
+# Then lets say you want to drop all the ssh programs.
 sudo bash /var/opt/spiral-arm/clearwhitelist.sh
 sudo bash /var/opt/spiral-arm/setlimit.sh
-What would you like the ssh limit to be?
-0
+# What would you like the ssh limit to be?
+# 0
 # And there is an alias file to speed up these commands.
