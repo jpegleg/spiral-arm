@@ -12,6 +12,6 @@ mit."
 else
     head -6 /var/opt/spiral-arm/ssh-limit.sh > /var/opt/spiral-arm/tmp.setscript
     echo SETLIMIT=$SETMAX >> /var/opt/spiral-arm/tmp.setscript
-    tail -66 /var/opt/spiral-arm/ssh-limit.sh >> /var/opt/spiral-arm/tmp.setscript
+    tail -52 /var/opt/spiral-arm/ssh-limit.sh >> /var/opt/spiral-arm/tmp.setscript
     cp /var/opt/spiral-arm/tmp.setscript /var/opt/spiral-arm/ssh-limit.sh
 fi

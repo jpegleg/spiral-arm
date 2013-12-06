@@ -24,7 +24,7 @@ function createblacklist {
 }
 # A function to kill off pids from the blacklist.
 function killblacklist {
-if [[ "$SSHCOUNT" > "$SETLIMIT" ]]; then
+if [[ "$SSHCOUNT" -gt "$SETLIMIT" ]]; then
     TOKILL=$(cat /var/opt/spiral-arm/black.pid)
     kill -9 $TOKILL
     echo Killed "$TOKILL" >> /tmp/ssh-kills 
