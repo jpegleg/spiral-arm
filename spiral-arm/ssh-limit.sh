@@ -14,7 +14,7 @@ IGNOREPROC3=NULL
 
 # Count the ssh hits.
 
-SSHCOUNT=$(ps aux | grep ssh | grep -v grep | grep -v ssh-limit.sh | grep -v $IGNOREPROC1 | grep -v $IGNOREPROC2 | grep -v $IGNOREPROC3 | awk '{print $2}') 
+SSHCOUNT=$(ps aux | grep ssh | grep -v grep | grep -v ssh-limit.sh | grep -v $IGNOREPROC1 | grep -v $IGNOREPROC2 | grep -v $IGNOREPROC3 | awk '{print $2}'| wc -l) 
 
 # A function to create a blacklist
 function createblacklist { 
