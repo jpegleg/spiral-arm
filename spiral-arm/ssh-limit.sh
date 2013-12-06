@@ -12,15 +12,9 @@ IGNOREPROC1=NULL
 IGNOREPROC2=NULL
 IGNOREPROC3=NULL
 
-# Count the ssh hits and store the pids to a file and variable.
+# Count the ssh hits.
 
-SSHPS=$(ps aux | grep ssh | grep -v grep | grep -v ssh-limit.sh | grep -v $IGNOREPROC1 | grep -v $IGNOREPROC2 | grep -v $IGNOREPROC3 | awk '{print $2}') 
-
-for x in $SSHPS; do 
-    echo $x > /var/opt/spiral-arm/ssh-count.out; 
-done;
-
-SSHCOUNT=$(cat /var/opt/spiral-arm/ssh-count.out | wc -l) 
+SSHCOUNT=$(ps aux | grep ssh | grep -v grep | grep -v ssh-limit.sh | grep -v $IGNOREPROC1 | grep -v $IGNOREPROC2 | grep -v $IGNOREPROC3 | awk '{print $2}') 
 
 # A function to create a blacklist
 function createblacklist { 

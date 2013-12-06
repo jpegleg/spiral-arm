@@ -8,6 +8,7 @@ for UNIX system monitoring and process control.
 The Library currently includes the following:
 - ssh-limit.sh
 - lock.sh
+- stoplock.sh
 - setlimit.sh
 - stand-alone functions
 
