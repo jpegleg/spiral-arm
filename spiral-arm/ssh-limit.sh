@@ -17,7 +17,7 @@ IGNOREPROC3=NULL
 SSHPS=$(ps aux | grep ssh | grep -v grep | grep -v ssh-limit.sh | grep -v $IGNOREPROC1 | grep -v $IGNOREPROC2 | grep -v $IGNOREPROC3 | awk '{print $2}') 
 
 for x in $SSHPS; do 
-    echo $x >> /var/opt/spiral-arm/ssh-count.out; 
+    echo $x > /var/opt/spiral-arm/ssh-count.out; 
 done;
 
 SSHCOUNT=$(cat /var/opt/spiral-arm/ssh-count.out | wc -l) 
@@ -63,7 +63,3 @@ function createwhitelist {
    
 # Use count and whitelist diff to deternmine kill.
 createblacklist ; killblacklist 
-
-# Clean up.
-rm -f /var/opt/spiral-arm/ssh-count.out
-rm -f /tmp/ssh-kills
