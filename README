@@ -31,6 +31,9 @@ Note:
 1 - Root bypasses Spiral Arm.
 2 - Use "bash ./scriptnamehere" as root to run the scripts.
 
+To add the alias file:
+cat /var/opt/spiral-arm/alias >> /root/.bashrc
+
 Example usage:
 # Create the lock. The default is two ssh programs before 
 # it triggers kill on the blacklist.
