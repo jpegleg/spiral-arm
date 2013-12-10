@@ -22,7 +22,10 @@ bash ./install-spiral-arm.sh
 
 Then run the configurator to see what processes
 Spiral Arm will see:
-bash ./configurator.sh
+sudo bash /var/opt/spiral-arm/configurator.sh
+
+Or use the alias file to run the configurator:
+cfg
 
 Note:
 1 - Root bypasses Spiral Arm.
