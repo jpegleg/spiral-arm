@@ -1,11 +1,12 @@
 ######################
-## SPIRAL ARM  1.12 ##
+## SPIRAL ARM  1.13 ##
 ######################
 
 Spiral Arm is a collection of shell scripts
 for UNIX system monitoring and process control.
 
 The Library currently includes the following:
+- configurator.sh
 - ssh-limit.sh
 - lock.sh
 - stoplock.sh
@@ -18,6 +19,10 @@ spiralarm.tar.gz
 
 To install, become root and run:
 bash ./install-spiral-arm.sh
+
+Then run the configurator to see what processes
+Spiral Arm will see:
+bash ./configurator.sh
 
 Note:
 1 - Root bypasses Spiral Arm.
