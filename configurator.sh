@@ -1,16 +1,23 @@
 #!/usr/bin/env bash
 echo "Welcome to the Spiral Arm Configurator."
+sleep 0.1;
 echo "---------------------------------------"
+sleep 0.1;
 echo "-----------------------------------"
+sleep 0.1;
 echo "--------------------------------"
+sleep 0.1;
 echo "-----------------------------"
+sleep 0.1;
 echo "---------------------------"
+sleep 0.1;
 echo " "
 echo "Running sample results."
 sleep 2;
 ps aux | grep ssh | grep -v grep | grep -v root | grep -v lock.sh
 echo "       ";
 echo "The data above is what the default configuration will target."
+echo "ps aux | grep ssh | grep -v grep | grep -v root | grep -v lock.sh"
 echo "If your box requires a large number of ssh sessions or ssh applications,"
 echo "or many active development users, this default configuration will"
 echo "likely need to be changed to target only what you want with the kill."
