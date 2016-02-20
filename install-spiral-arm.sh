@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-rm -rf /var/opt/spiral-arm
-mkdir /var/opt/spiral-arm
-tar xzf spiralarm.tar.gz -C /var/opt/spiral-arm/
-chmod 644 /var/opt/spiral-arm
-chown root:root /var/opt/spiral-arm
+rm -rf /opt/spiral-arm
+mkdir /opt/spiral-arm
+tar xzf spiralarm.tar.gz -C /opt/spiral-arm/
+chmod 644 /opt/spiral-arm
+chown root:root /opt/spiral-arm
