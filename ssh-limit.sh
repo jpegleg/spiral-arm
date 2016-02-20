@@ -42,18 +42,6 @@ function createwhitelist {
     chown root:root /var/opt/spiral-arm/whitelist
     chown root:root /var/opt/spiral-arm
 }
-
-# Set the whitelist.
-# createwhitelist
-
-# Get the sessions to kill by count
-#
-# if [[ "$SSHCOUNT" > "$SETLIMIT" ]]; then
-#    createblacklist
-#    killblacklist
-# else
-#    createwhitelist
-#fi
-   
+ 
 # Use count and whitelist diff to deternmine kill.
 createblacklist ; killblacklist 
