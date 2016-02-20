@@ -4,7 +4,7 @@
 
 # Set the ssh hit limit
 
-SETLIMIT=2
+SETLIMIT=$(cat /etc/ssh-limit.cfg)
 
 # Set ignored pids to NULL 
 
@@ -45,7 +45,7 @@ function createwhitelist {
 ###############################################
 # Default run is kill items on the black list.#
 ###############################################
-if [ "$1"=createwhitelist ]; then
+if [ "$1"="createwhitelist" ]; then
     echo "Creating whitelist..."
     createwhitelist &&
     echo "Whitelist set as $(cat /opt/spiral-arm/whitelist | while read s; do echo "$s"; sleep 0.1; done);
