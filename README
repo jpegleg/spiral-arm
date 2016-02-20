@@ -36,18 +36,33 @@ To add the alias file:
 cat /opt/spiral-arm/alias >> /root/.bashrc
 
 Example usage:
+
 # Create the lock. The default is two ssh programs before 
 # it triggers kill on the blacklist.
+
 sudo bash /opt/spiral-arm/lock.sh &
+
 # So now you can add one ssh program.
 # /place/thing-ssh start
 # Then add it to the whitelist.
+
 sudo bash /opt/spiral-arm/whitelistfunction.sh
+
 # Then lets say you want to drop all the ssh programs.
+
 sudo bash /opt/spiral-arm/clearwhitelist.sh
 sudo bash /opt/spiral-arm/setlimit.sh
+
 # What would you like the ssh limit to be?
 # Set it like so
+
 echo 2 > /etc/ssh-limits.cfg
-# 0
+
 # And there is an alias file to speed up these commands.
+
+cat ./alias >> ~/.bashrc
+
+# Set whitelist
+wlf
+# Lock down
+lock
